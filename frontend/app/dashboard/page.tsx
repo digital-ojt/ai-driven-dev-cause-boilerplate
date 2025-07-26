@@ -67,6 +67,59 @@ export default function DashboardPage() {
               </Flex>
             </CardBody>
           </Card>
+
+          {/* Stats */}
+          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
+            <Card bg={statBg} borderRadius="xl">
+              <CardBody>
+                <Stat>
+                  <StatLabel color="gray.600">総ログイン回数</StatLabel>
+                  <StatNumber color="primary.600">42</StatNumber>
+                </Stat>
+              </CardBody>
+            </Card>
+
+            <Card bg={statBg} borderRadius="xl">
+              <CardBody>
+                <Stat>
+                  <StatLabel color="gray.600">アクティブ日数</StatLabel>
+                  <StatNumber color="secondary.600">15</StatNumber>
+                </Stat>
+              </CardBody>
+            </Card>
+
+            <Card bg={statBg} borderRadius="xl">
+              <CardBody>
+                <Stat>
+                  <StatLabel color="gray.600">最終ログイン</StatLabel>
+                  <StatNumber fontSize="lg" color="accent.600">今日</StatNumber>
+                </Stat>
+              </CardBody>
+            </Card>
+          </SimpleGrid>
+
+          {/* Welcome Message */}
+          <Card bg={cardBg} shadow="md" borderRadius="xl">
+            <CardBody p={8}>
+              <VStack spacing={4} align="start">
+                <Heading size="md" color="gray.700">
+                  アプリケーションダッシュボード
+                </Heading>
+                <Text color="gray.600" lineHeight="tall">
+                  認証システムが正常に動作しています。このダッシュボードでは、
+                  ユーザーの活動状況や各種設定を管理できます。
+                </Text>
+                <HStack spacing={4} pt={4}>
+                  <Button colorScheme="primary" size="md">
+                    設定を編集
+                  </Button>
+                  <Button variant="outline" colorScheme="secondary" size="md">
+                    プロフィール更新
+                  </Button>
+                </HStack>
+              </VStack>
+            </CardBody>
+          </Card>
         </VStack>
       </Container>
     </ProtectedRoute>
