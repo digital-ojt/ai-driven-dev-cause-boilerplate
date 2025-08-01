@@ -21,11 +21,12 @@ Ref. https://zenn.dev/okamyuji/articles/0bfcc5a9b17cb5
 
 ### APIエンドポイント
 
-| エンドポイント | メソッド | 説明 | 認証要否 |
-|--------------|--------|-----|---------|
-| `/api/v1/auth/register` | POST | 新規ユーザー登録 | 不要 |
-| `/api/v1/auth/authenticate` | POST | ユーザー認証・JWT取得 | 不要 |
-| `/api/v1/auth/refresh-token` | POST | トークン更新 | 必要 (リフレッシュトークン) |
+| エンドポイント                      | メソッド | 説明           | 認証要否 |
+|------------------------------|------|--------------|---------|
+| `/api/v1/auth/register`      | POST | 新規ユーザー登録     | 不要 |
+| `/api/v1/auth/authenticate`  | POST | ユーザー認証・JWT取得 | 不要 |
+| `/api/v1/auth/refresh-token` | POST | トークン更新       | 必要 (リフレッシュトークン) |
+| `/api/v1/users/{id}`         | GET  | ユーザー情報取得     | 必要 (リフレッシュトークン) |
 
 ### テスト実行
 
