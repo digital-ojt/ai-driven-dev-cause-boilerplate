@@ -45,6 +45,11 @@ $ ./mvnw test
 
 ### 環境構築
 
-1. `npm install` で依存関係をインストール
-2. `npm run dev` で開発サーバーを起動
-3. ブラウザで `http://localhost:3000` にアクセス
+1. `.env.sample`をコピーして`.env.local`を作成してください。 
+```
+BACKEND_API_URL=http://localhost:8080
+```
+
+2. `npm install` で依存関係をインストール
+3. `npm run dev` で開発サーバーを起動
+4. ブラウザで `http://localhost:3000` にアクセス
